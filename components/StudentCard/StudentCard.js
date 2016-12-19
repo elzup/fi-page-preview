@@ -15,14 +15,6 @@ class StudentCard extends React.Component {
     className: PropTypes.string,
   };
 
-  componentDidMount() {
-    window.componentHandler.upgradeElement(this.root);
-  }
-
-  componentWillUnmount() {
-    window.componentHandler.downgradeElements(this.root);
-  }
-
   render() {
     const { student, className, ...other } = this.props;
     return (
