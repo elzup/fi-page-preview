@@ -15,6 +15,9 @@
   }
 
 }
+.content {
+  padding: 0 16px;
+}
 
 .students {
   display: flex;
