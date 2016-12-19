@@ -14,6 +14,7 @@ const fs = require('fs');
 const del = require('del');
 const ejs = require('ejs');
 const webpack = require('webpack');
+const Pageres = require('pageres')
 
 // TODO: Update configuration settings
 const config = {
@@ -78,6 +79,32 @@ tasks.set('bundle', () => {
       }
     });
   });
+});
+
+tasks.set('download_images', () => {
+  const public_dir = 'public/'
+  const save_dir = 'images/'
+  const dest_dir = public_dir + save_dir
+  const base_url = 'http://www.mlab.im.dendai.ac.jp/~';
+  const lastId = 132;
+  const links = []
+
+  for (let i of Array(lastId).keys()) {
+    const id = '16fi' + ('000' + (i + 1)).slice(-3);
+    const url = base_url + id
+    const filename = id + '.jpg'
+    const newLink = {
+      id: id,
+      path: save_dir + filename
+    }
+    links.push(newLink)
+    const pageres = new Pageres({delay: 2, filename: filename })
+    .src(url, ['1024x768'])
+    .dest(dest_dir)
+    .run()
+    .then(() => console.log(`done: ${url}`));
+    fs.writeFileSync('public/links.json', JSON.stringify(links))
+  }
 });
 
 //
