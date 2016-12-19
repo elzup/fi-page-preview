@@ -1,6 +1,6 @@
 [
   {
-    "path": "/",
+    "path": "/fi-page-preview",
     "page": "./pages/home",
     "chunk": "main",
     "data": {
