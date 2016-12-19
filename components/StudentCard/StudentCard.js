@@ -23,7 +23,7 @@ class StudentCard extends React.Component {
         <Card
         level={2}>
           <div className={s.thumbnail_box}>
-            <img src={student.path} className={s.thumbnail}></img>
+            <img src={student.prod_path} className={s.thumbnail}></img>
           </div>
           <div className={s.content} >
             <h3 className={s.title} >{student.id}</h3>

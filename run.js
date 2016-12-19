@@ -96,9 +96,11 @@ tasks.set('download_images', () => {
       id: id,
       path: save_dir + id + '.png',
       abs_path: public_dir + save_dir + id + '.png',
+      prod_path: `https://media.githubusercontent.com/media/elzup/fi-page-preview/gh-pages/images/${id}.png`,
       url: url
     }
     students.push(student)
+
     const pageres = new Pageres({delay: 2, filename: id })
     .src(url, ['1024x768'])
     .dest(dest_dir)
