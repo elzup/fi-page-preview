@@ -1,10 +1,8 @@
 ---
-title: React Static Boilerplate
+title: TDU-FI Student Web Page Previews
 ---
 
 ## Welcome!
+FI科生 学生ページのプレビューです。
 
-This is a single-page application powered by React and Material Design Lite (MDL).
-
-https://github.com/kriasoft/react-static-boilerplate
-
+http://www.mlab.im.dendai.ac.jp/students/ (学内からのみ)
