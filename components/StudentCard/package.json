@@ -1,0 +1,6 @@
+{
+  "name": "StudentCard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./StudentCard.js"
+}

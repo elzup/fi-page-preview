@@ -44,6 +44,7 @@ const config = {
     path: path.resolve(__dirname, './public/dist'),
     publicPath: '/dist/',
     filename: isDebug ? '[name].js?[hash]' : '[name].[hash].js',
+    target: 'node',
     chunkFilename: isDebug ? '[id].js?[chunkhash]' : '[id].[chunkhash].js',
     sourcePrefix: '  ',
   },

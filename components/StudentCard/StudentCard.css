@@ -1,0 +1,18 @@
+.content {
+  padding: 10px;
+}
+
+.title {
+  padding: 0px;
+  margin: 0px;
+}
+
+.thumbnail_box {
+  height: 260px;
+  overflow: hidden;
+}
+
+.thumbnail {
+  width: 350px;
+  height: auto;
+}
